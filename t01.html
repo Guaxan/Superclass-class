@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+class Veiculo {
+    #marca;
+    #modelo;
+    #cor;
+    constructor(marca, modelo, cor) {
+        this.#marca = marca;
+        this.#modelo = modelo;
+        this.#cor = cor;
+    }
+    get marca() {
+        return this.#marca;
+    }
+    get modelo() {
+        return this.#modelo;
+    }
+    get cor() {
+        return this.#cor;
+    }
+
+}
+
+class Carro extends Veiculo {
+    #ano;
+    constructor(marca, modelo, cor, ano) {
+        super(marca, modelo, cor);
+        this.#ano = ano;
+    }
+    get ano() {
+        return this.#ano;
+    }
+}
+
+class Moto extends Veiculo {
+    #ano;
+    constructor(marca, modelo, cor, ano) {
+        super(marca, modelo, cor);
+        this.#ano = ano;
+    }
+    get ano() {
+        return this.#ano;
+    }
+}
+
+class Bicicleta extends Veiculo {
+    constructor(marca, modelo, cor) {
+        super(marca, modelo, cor);
+    }
+}
+
+Moto1 = new Moto("Honda", "CG125", "Preta", "1997");
+Carro1 = new Carro("Honda", "City", "Prata", "2014");
+Bicicleta1 = new Bicicleta("Caloi", "Monark", "Vermelha");
+
+console.log(`Moto: ${Moto1.modelo}\nAno ${Moto1.ano}\nMarca: ${Moto1.marca}\nCor: ${Moto1.cor}`)
+console.log(`Carro: ${Carro1.modelo}\nAno ${Carro1.ano}\nMarca: ${Carro1.marca}\nCor: ${Carro1.cor}`)
+console.log(`Bicicleta: ${Bicicleta1.modelo}\nMarca: ${Bicicleta1.marca}\nCor: ${Bicicleta1.cor}`)
+    </script>
+
+</body>
+
+</html>
